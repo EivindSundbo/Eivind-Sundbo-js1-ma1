@@ -69,6 +69,8 @@ function createCats(){
     let html = "";
     for (let i = 0; i < cats.length; i++){
     
+    let catName = cats[i].name;
+
     let missingAge = "Age unknown";
     if(cats[i].age){
         missingAge = cats[i].age
@@ -76,8 +78,8 @@ function createCats(){
 
     html += `
     <div>
-    <h5> name: ${cats[i].name} </h5>
-    <p> age: ${cats[i].age}
+    <h5> name: ${catName} </h5>
+    <p> age: ${missingAge}
     </div>
     `;
     }
